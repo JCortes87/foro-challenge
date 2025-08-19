@@ -94,4 +94,16 @@ public class Topico {
     public void setCurso(String curso) {
         this.curso = curso;
     }
+
+    public void actualizarInformacion(@Valid DatosActualizacionTopico topico) {
+        if (topico.titulo() != null) {
+            this.titulo = topico.titulo();
+        }
+        if (topico.mensaje() != null) {
+            this.mensaje = topico.mensaje();
+        }
+        if (topico.status() != null) {
+            this.status = topico.status();
+        }
+    }
 }
